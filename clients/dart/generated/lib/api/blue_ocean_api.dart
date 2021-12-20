@@ -39,9 +39,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -88,9 +85,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -138,9 +132,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -188,9 +179,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -241,9 +229,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -291,9 +276,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -338,9 +320,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -391,9 +370,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -444,9 +420,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -500,9 +473,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -559,9 +529,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -612,9 +579,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -665,9 +629,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -721,9 +682,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -774,9 +732,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -830,9 +785,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -892,9 +844,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -951,9 +900,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1013,9 +959,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1075,9 +1018,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1134,9 +1074,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1190,9 +1127,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1243,9 +1177,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1293,9 +1224,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1346,9 +1274,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1411,9 +1336,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1438,7 +1360,7 @@ class BlueOceanApi {
   /// 
   ///
   /// Retrieve SCM organization repository details for an organization
-  Future<ScmOrganisations> getSCMOrganisationRepository(String organization, String scm, String scmOrganisation, String repository, { String credentialId }) async {
+  Future<ScmOrganisations> getSCMOrganisationRepository(String organization, String scm, String scmOrganisation, String repository, { String? credentialId }) async {
     Object? postBody = null;
 
     // verify required params are set
@@ -1473,9 +1395,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1529,9 +1448,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1582,9 +1498,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1632,9 +1545,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1682,9 +1592,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1738,9 +1645,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1791,9 +1695,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1847,9 +1748,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1909,9 +1807,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1960,9 +1855,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -2011,9 +1903,6 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }

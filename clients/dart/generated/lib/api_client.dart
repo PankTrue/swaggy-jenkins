@@ -9,7 +9,7 @@ class QueryParam {
 
 class ApiClient {
 
-  String basePath;
+  String? _basePath;
   var client = new BrowserClient();
 
   Map<String, String> _defaultHeaderMap = {};
@@ -18,9 +18,10 @@ class ApiClient {
   final _RegList = new RegExp(r'^List<(.*)>$');
   final _RegMap = new RegExp(r'^Map<String,(.*)>$');
 
-  ApiClient({this.basePath: "http://localhost"}) {
+  ApiClient(String url, String username, String password) {
     // Setup authentications (key: authentication name, value: authentication).
-    _authentications['jenkins_auth'] = new HttpBasicAuth();
+    _basePath = url;
+    _authentications['jenkins_auth'] = new HttpBasicAuth(username, password);
     _authentications['jwt_auth'] = new ApiKeyAuth("header", "Authorization");
   }
 
@@ -284,7 +285,7 @@ class ApiClient {
                          '?' + ps.join('&') :
                          '';
 
-    String url = basePath + path + queryString;
+    String url = _basePath! + path + queryString;
 
     headerParams.addAll(_defaultHeaderMap);
     headerParams['Content-Type'] = contentType;

@@ -34,9 +34,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -81,9 +78,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -131,9 +125,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -181,9 +172,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -231,9 +219,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -288,9 +273,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -334,9 +316,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -384,9 +363,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -434,9 +410,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -484,9 +457,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -531,9 +501,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -589,9 +556,6 @@ class RemoteAccessApi {
 
     if(_contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -641,9 +605,6 @@ class RemoteAccessApi {
 
     if(contentType_.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -698,9 +659,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -751,9 +709,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -801,9 +756,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -851,9 +803,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -901,9 +850,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -951,9 +897,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }
@@ -1004,9 +947,6 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null!, null!);
-      if(hasFields)
-        postBody = mp;
     }
     else {
     }

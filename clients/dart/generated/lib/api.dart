@@ -112,4 +112,4 @@ part 'model/user_favorites.dart';
 part 'model/users.dart';
 
 
-ApiClient defaultApiClient = new ApiClient();
+ApiClient defaultApiClient = new ApiClient("http://127.0.0.1/", "username", "password");

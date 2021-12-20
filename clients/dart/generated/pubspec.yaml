@@ -2,6 +2,6 @@ name: openapi
 version: 1.0.0
 description: OpenAPI API client
 environment:
-  sdk: ">=2.15.0 <3.0.0"
+  sdk: "2.15.1"
 dependencies:
-  http: '>=0.13.4 <0.14.0'
+  http: '0.13.4'
