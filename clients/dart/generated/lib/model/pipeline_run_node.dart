@@ -2,21 +2,21 @@ part of openapi.api;
 
 class PipelineRunNode {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  int durationInMillis = null;
+  int? durationInMillis = null;
   
   List<PipelineRunNodeedges> edges = [];
   
-  String id = null;
+  String? id = null;
   
-  String result = null;
+  String? result = null;
   
-  String startTime = null;
+  String? startTime = null;
   
-  String state = null;
+  String? state = null;
   PipelineRunNode();
 
   @override
@@ -50,7 +50,7 @@ class PipelineRunNode {
   }
 
   static List<PipelineRunNode> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineRunNode>() : json.map((value) => new PipelineRunNode.fromJson(value)).toList();
+    return json == null ? <PipelineRunNode>[] : json.map((value) => new PipelineRunNode.fromJson(value)).toList();
   }
 
   static Map<String, PipelineRunNode> mapFromJson(Map<String, Map<String, dynamic>> json) {

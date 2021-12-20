@@ -2,15 +2,15 @@ part of openapi.api;
 
 class ComputerSet {
   
-  String class_ = null;
+  String? class_ = null;
   
-  int busyExecutors = null;
+  int? busyExecutors = null;
   
   List<HudsonMasterComputer> computer = [];
   
-  String displayName = null;
+  String? displayName = null;
   
-  int totalExecutors = null;
+  int? totalExecutors = null;
   ComputerSet();
 
   @override
@@ -38,7 +38,7 @@ class ComputerSet {
   }
 
   static List<ComputerSet> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ComputerSet>() : json.map((value) => new ComputerSet.fromJson(value)).toList();
+    return json == null ? <ComputerSet>[] : json.map((value) => new ComputerSet.fromJson(value)).toList();
   }
 
   static Map<String, ComputerSet> mapFromJson(Map<String, Map<String, dynamic>> json) {

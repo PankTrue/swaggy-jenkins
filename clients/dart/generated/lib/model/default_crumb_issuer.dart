@@ -2,11 +2,11 @@ part of openapi.api;
 
 class DefaultCrumbIssuer {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String crumb = null;
+  String? crumb = null;
   
-  String crumbRequestField = null;
+  String? crumbRequestField = null;
   DefaultCrumbIssuer();
 
   @override
@@ -30,7 +30,7 @@ class DefaultCrumbIssuer {
   }
 
   static List<DefaultCrumbIssuer> listFromJson(List<dynamic> json) {
-    return json == null ? new List<DefaultCrumbIssuer>() : json.map((value) => new DefaultCrumbIssuer.fromJson(value)).toList();
+    return json == null ? <DefaultCrumbIssuer>[] : json.map((value) => new DefaultCrumbIssuer.fromJson(value)).toList();
   }
 
   static Map<String, DefaultCrumbIssuer> mapFromJson(Map<String, Map<String, dynamic>> json) {

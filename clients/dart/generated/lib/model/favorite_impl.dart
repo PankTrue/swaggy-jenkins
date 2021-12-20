@@ -2,11 +2,11 @@ part of openapi.api;
 
 class FavoriteImpl {
   
-  String class_ = null;
+  String? class_ = null;
   
-  FavoriteImpllinks links = null;
+  FavoriteImpllinks? links = null;
   
-  PipelineImpl item = null;
+  PipelineImpl? item = null;
   FavoriteImpl();
 
   @override
@@ -30,7 +30,7 @@ class FavoriteImpl {
   }
 
   static List<FavoriteImpl> listFromJson(List<dynamic> json) {
-    return json == null ? new List<FavoriteImpl>() : json.map((value) => new FavoriteImpl.fromJson(value)).toList();
+    return json == null ? <FavoriteImpl>[] : json.map((value) => new FavoriteImpl.fromJson(value)).toList();
   }
 
   static Map<String, FavoriteImpl> mapFromJson(Map<String, Map<String, dynamic>> json) {

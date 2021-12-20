@@ -2,13 +2,13 @@ part of openapi.api;
 
 class GithubOrganization {
   
-  String class_ = null;
+  String? class_ = null;
   
-  GithubOrganizationlinks links = null;
+  GithubOrganizationlinks? links = null;
   
-  bool jenkinsOrganizationPipeline = null;
+  bool? jenkinsOrganizationPipeline = null;
   
-  String name = null;
+  String? name = null;
   GithubOrganization();
 
   @override
@@ -34,7 +34,7 @@ class GithubOrganization {
   }
 
   static List<GithubOrganization> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubOrganization>() : json.map((value) => new GithubOrganization.fromJson(value)).toList();
+    return json == null ? <GithubOrganization>[] : json.map((value) => new GithubOrganization.fromJson(value)).toList();
   }
 
   static Map<String, GithubOrganization> mapFromJson(Map<String, Map<String, dynamic>> json) {

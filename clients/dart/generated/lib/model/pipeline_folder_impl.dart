@@ -2,19 +2,19 @@ part of openapi.api;
 
 class PipelineFolderImpl {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  String fullName = null;
+  String? fullName = null;
   
-  String name = null;
+  String? name = null;
   
-  String organization = null;
+  String? organization = null;
   
-  int numberOfFolders = null;
+  int? numberOfFolders = null;
   
-  int numberOfPipelines = null;
+  int? numberOfPipelines = null;
   PipelineFolderImpl();
 
   @override
@@ -46,7 +46,7 @@ class PipelineFolderImpl {
   }
 
   static List<PipelineFolderImpl> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineFolderImpl>() : json.map((value) => new PipelineFolderImpl.fromJson(value)).toList();
+    return json == null ? <PipelineFolderImpl>[] : json.map((value) => new PipelineFolderImpl.fromJson(value)).toList();
   }
 
   static Map<String, PipelineFolderImpl> mapFromJson(Map<String, Map<String, dynamic>> json) {

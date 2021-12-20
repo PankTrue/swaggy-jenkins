@@ -2,9 +2,9 @@ part of openapi.api;
 
 class ExtensionClassImpllinks {
   
-  Link self = null;
+  Link? self = null;
   
-  String class_ = null;
+  String? class_ = null;
   ExtensionClassImpllinks();
 
   @override
@@ -26,7 +26,7 @@ class ExtensionClassImpllinks {
   }
 
   static List<ExtensionClassImpllinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ExtensionClassImpllinks>() : json.map((value) => new ExtensionClassImpllinks.fromJson(value)).toList();
+    return json == null ? <ExtensionClassImpllinks>[] : json.map((value) => new ExtensionClassImpllinks.fromJson(value)).toList();
   }
 
   static Map<String, ExtensionClassImpllinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

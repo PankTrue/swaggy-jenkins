@@ -2,17 +2,17 @@ part of openapi.api;
 
 class GithubRepositories {
   
-  String class_ = null;
+  String? class_ = null;
   
-  GithubRepositorieslinks links = null;
+  GithubRepositorieslinks? links = null;
   
   List<GithubRepository> items = [];
   
-  int lastPage = null;
+  int? lastPage = null;
   
-  int nextPage = null;
+  int? nextPage = null;
   
-  int pageSize = null;
+  int? pageSize = null;
   GithubRepositories();
 
   @override
@@ -42,7 +42,7 @@ class GithubRepositories {
   }
 
   static List<GithubRepositories> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubRepositories>() : json.map((value) => new GithubRepositories.fromJson(value)).toList();
+    return json == null ? <GithubRepositories>[] : json.map((value) => new GithubRepositories.fromJson(value)).toList();
   }
 
   static Map<String, GithubRepositories> mapFromJson(Map<String, Map<String, dynamic>> json) {

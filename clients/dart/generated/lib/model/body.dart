@@ -2,7 +2,7 @@ part of openapi.api;
 
 class Body {
   
-  bool favorite = null;
+  bool? favorite = null;
   Body();
 
   @override
@@ -22,7 +22,7 @@ class Body {
   }
 
   static List<Body> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Body>() : json.map((value) => new Body.fromJson(value)).toList();
+    return json == null ? <Body>[] : json.map((value) => new Body.fromJson(value)).toList();
   }
 
   static Map<String, Body> mapFromJson(Map<String, Map<String, dynamic>> json) {

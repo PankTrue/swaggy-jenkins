@@ -2,37 +2,37 @@ part of openapi.api;
 
 class HudsonMasterComputer {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String displayName = null;
+  String? displayName = null;
   
   List<HudsonMasterComputerexecutors> executors = [];
   
-  String icon = null;
+  String? icon = null;
   
-  String iconClassName = null;
+  String? iconClassName = null;
   
-  bool idle = null;
+  bool? idle = null;
   
-  bool jnlpAgent = null;
+  bool? jnlpAgent = null;
   
-  bool launchSupported = null;
+  bool? launchSupported = null;
   
-  Label1 loadStatistics = null;
+  Label1? loadStatistics = null;
   
-  bool manualLaunchAllowed = null;
+  bool? manualLaunchAllowed = null;
   
-  HudsonMasterComputermonitorData monitorData = null;
+  HudsonMasterComputermonitorData? monitorData = null;
   
-  int numExecutors = null;
+  int? numExecutors = null;
   
-  bool offline = null;
+  bool? offline = null;
   
-  String offlineCause = null;
+  String? offlineCause = null;
   
-  String offlineCauseReason = null;
+  String? offlineCauseReason = null;
   
-  bool temporarilyOffline = null;
+  bool? temporarilyOffline = null;
   HudsonMasterComputer();
 
   @override
@@ -82,7 +82,7 @@ class HudsonMasterComputer {
   }
 
   static List<HudsonMasterComputer> listFromJson(List<dynamic> json) {
-    return json == null ? new List<HudsonMasterComputer>() : json.map((value) => new HudsonMasterComputer.fromJson(value)).toList();
+    return json == null ? <HudsonMasterComputer>[] : json.map((value) => new HudsonMasterComputer.fromJson(value)).toList();
   }
 
   static Map<String, HudsonMasterComputer> mapFromJson(Map<String, Map<String, dynamic>> json) {

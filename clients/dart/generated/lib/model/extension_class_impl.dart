@@ -2,9 +2,9 @@ part of openapi.api;
 
 class ExtensionClassImpl {
   
-  String class_ = null;
+  String? class_ = null;
   
-  ExtensionClassImpllinks links = null;
+  ExtensionClassImpllinks? links = null;
   
   List<String> classes = [];
   ExtensionClassImpl();
@@ -30,7 +30,7 @@ class ExtensionClassImpl {
   }
 
   static List<ExtensionClassImpl> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ExtensionClassImpl>() : json.map((value) => new ExtensionClassImpl.fromJson(value)).toList();
+    return json == null ? <ExtensionClassImpl>[] : json.map((value) => new ExtensionClassImpl.fromJson(value)).toList();
   }
 
   static Map<String, ExtensionClassImpl> mapFromJson(Map<String, Map<String, dynamic>> json) {

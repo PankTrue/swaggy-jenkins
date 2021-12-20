@@ -2,15 +2,15 @@ part of openapi.api;
 
 class FreeStyleProjecthealthReport {
   
-  String description = null;
+  String? description = null;
   
-  String iconClassName = null;
+  String? iconClassName = null;
   
-  String iconUrl = null;
+  String? iconUrl = null;
   
-  int score = null;
+  int? score = null;
   
-  String class_ = null;
+  String? class_ = null;
   FreeStyleProjecthealthReport();
 
   @override
@@ -38,7 +38,7 @@ class FreeStyleProjecthealthReport {
   }
 
   static List<FreeStyleProjecthealthReport> listFromJson(List<dynamic> json) {
-    return json == null ? new List<FreeStyleProjecthealthReport>() : json.map((value) => new FreeStyleProjecthealthReport.fromJson(value)).toList();
+    return json == null ? <FreeStyleProjecthealthReport>[] : json.map((value) => new FreeStyleProjecthealthReport.fromJson(value)).toList();
   }
 
   static Map<String, FreeStyleProjecthealthReport> mapFromJson(Map<String, Map<String, dynamic>> json) {

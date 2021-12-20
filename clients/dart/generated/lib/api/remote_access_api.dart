@@ -5,13 +5,13 @@ part of openapi.api;
 class RemoteAccessApi {
   final ApiClient apiClient;
 
-  RemoteAccessApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  RemoteAccessApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// 
   ///
   /// Retrieve computer details
   Future<ComputerSet> getComputer(int depth) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(depth == null) {
@@ -34,7 +34,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -44,7 +44,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -55,14 +55,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'ComputerSet') as ComputerSet;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve Jenkins details
   Future<Hudson> getJenkins() async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
 
@@ -81,7 +81,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -91,7 +91,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -102,14 +102,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'Hudson') as Hudson;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve job details
   Future<FreeStyleProject> getJob(String name) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -131,7 +131,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -141,7 +141,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -152,14 +152,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'FreeStyleProject') as FreeStyleProject;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve job configuration
   Future<String> getJobConfig(String name) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -181,7 +181,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -191,7 +191,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -202,14 +202,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve job&#39;s last build details
   Future<FreeStyleBuild> getJobLastBuild(String name) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -231,7 +231,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -241,7 +241,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -252,14 +252,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'FreeStyleBuild') as FreeStyleBuild;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve job&#39;s build progressive text output
   Future getJobProgressiveText(String name, String number, String start) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -288,7 +288,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -298,7 +298,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -315,7 +315,7 @@ class RemoteAccessApi {
   ///
   /// Retrieve queue details
   Future<Queue> getQueue() async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
 
@@ -334,7 +334,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -344,7 +344,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -355,14 +355,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'Queue') as Queue;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve queued item details
   Future<Queue> getQueueItem(String number) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(number == null) {
@@ -384,7 +384,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -394,7 +394,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -405,14 +405,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'Queue') as Queue;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve view details
   Future<ListView> getView(String name) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -434,7 +434,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -444,7 +444,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -455,14 +455,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'ListView') as ListView;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve view configuration
   Future<String> getViewConfig(String name) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -484,7 +484,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -494,7 +494,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -505,14 +505,14 @@ class RemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve Jenkins headers
   Future headJenkins() async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
 
@@ -531,7 +531,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -541,7 +541,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'HEAD',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -557,8 +557,8 @@ class RemoteAccessApi {
   /// 
   ///
   /// Create a new job using job configuration, or copied from an existing job
-  Future postCreateItem(String name, { String from, String mode, String jenkinsCrumb, String contentType, String body }) async {
-    Object postBody = body;
+  Future postCreateItem(String name, { String? from, String? mode, String? jenkinsCrumb, String? contentType, String? body }) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(name == null) {
@@ -579,17 +579,17 @@ class RemoteAccessApi {
     if(mode != null) {
       queryParams.addAll(_convertParametersForCollectionFormat("", "mode", mode));
     }
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
-    headerParams["Content-Type"] = contentType;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
+    headerParams["Content-Type"] = contentType!;
 
     List<String> contentTypes = ["application/json"];
 
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+    String _contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = ["jenkins_auth"];
 
-    if(contentType.startsWith("multipart/form-data")) {
+    if(_contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -599,7 +599,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -615,8 +615,8 @@ class RemoteAccessApi {
   /// 
   ///
   /// Create a new view using view configuration
-  Future postCreateView(String name, { String jenkinsCrumb, String contentType, String body }) async {
-    Object postBody = body;
+  Future postCreateView(String name, { String? jenkinsCrumb, String? contentType, String? body }) async {
+    Object? postBody = body;
 
     // verify required params are set
     if(name == null) {
@@ -631,17 +631,17 @@ class RemoteAccessApi {
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
       queryParams.addAll(_convertParametersForCollectionFormat("", "name", name));
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
-    headerParams["Content-Type"] = contentType;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
+    headerParams["Content-Type"] = contentType!;
 
     List<String> contentTypes = ["application/json"];
 
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+    String contentType_ = contentTypes.length > 0 ? contentTypes[0] : "application/json";
     List<String> authNames = ["jenkins_auth"];
 
-    if(contentType.startsWith("multipart/form-data")) {
+    if(contentType_.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -651,7 +651,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -667,8 +667,8 @@ class RemoteAccessApi {
   /// 
   ///
   /// Build a job
-  Future postJobBuild(String name, String json, { String token, String jenkinsCrumb }) async {
-    Object postBody = null;
+  Future postJobBuild(String name, String json, { String? token, String? jenkinsCrumb }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -689,7 +689,7 @@ class RemoteAccessApi {
     if(token != null) {
       queryParams.addAll(_convertParametersForCollectionFormat("", "token", token));
     }
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
 
     List<String> contentTypes = [];
 
@@ -698,7 +698,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -708,7 +708,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -724,7 +724,7 @@ class RemoteAccessApi {
   /// 
   ///
   /// Update job configuration
-  Future postJobConfig(String name, String body, { String jenkinsCrumb }) async {
+  Future postJobConfig(String name, String body, { String? jenkinsCrumb }) async {
     Object postBody = body;
 
     // verify required params are set
@@ -742,7 +742,7 @@ class RemoteAccessApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
 
     List<String> contentTypes = ["application/json"];
 
@@ -751,7 +751,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -777,8 +777,8 @@ class RemoteAccessApi {
   /// 
   ///
   /// Delete a job
-  Future postJobDelete(String name, { String jenkinsCrumb }) async {
-    Object postBody = null;
+  Future postJobDelete(String name, { String? jenkinsCrumb }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -792,7 +792,7 @@ class RemoteAccessApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
 
     List<String> contentTypes = [];
 
@@ -801,7 +801,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -811,7 +811,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -827,8 +827,8 @@ class RemoteAccessApi {
   /// 
   ///
   /// Disable a job
-  Future postJobDisable(String name, { String jenkinsCrumb }) async {
-    Object postBody = null;
+  Future postJobDisable(String name, { String? jenkinsCrumb }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -842,7 +842,7 @@ class RemoteAccessApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
 
     List<String> contentTypes = [];
 
@@ -851,7 +851,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -861,7 +861,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -877,8 +877,8 @@ class RemoteAccessApi {
   /// 
   ///
   /// Enable a job
-  Future postJobEnable(String name, { String jenkinsCrumb }) async {
-    Object postBody = null;
+  Future postJobEnable(String name, { String? jenkinsCrumb }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -892,7 +892,7 @@ class RemoteAccessApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
 
     List<String> contentTypes = [];
 
@@ -901,7 +901,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -911,7 +911,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -927,8 +927,8 @@ class RemoteAccessApi {
   /// 
   ///
   /// Stop a job
-  Future postJobLastBuildStop(String name, { String jenkinsCrumb }) async {
-    Object postBody = null;
+  Future postJobLastBuildStop(String name, { String? jenkinsCrumb }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(name == null) {
@@ -942,7 +942,7 @@ class RemoteAccessApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
 
     List<String> contentTypes = [];
 
@@ -951,7 +951,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -961,7 +961,7 @@ class RemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -977,7 +977,7 @@ class RemoteAccessApi {
   /// 
   ///
   /// Update view configuration
-  Future postViewConfig(String name, String body, { String jenkinsCrumb }) async {
+  Future postViewConfig(String name, String body, { String? jenkinsCrumb }) async {
     Object postBody = body;
 
     // verify required params are set
@@ -995,7 +995,7 @@ class RemoteAccessApi {
     List<QueryParam> queryParams = [];
     Map<String, String> headerParams = {};
     Map<String, String> formParams = {};
-    headerParams["Jenkins-Crumb"] = jenkinsCrumb;
+    headerParams["Jenkins-Crumb"] = jenkinsCrumb!;
 
     List<String> contentTypes = ["application/json"];
 
@@ -1004,7 +1004,7 @@ class RemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }

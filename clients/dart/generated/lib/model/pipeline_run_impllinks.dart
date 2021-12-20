@@ -2,17 +2,17 @@ part of openapi.api;
 
 class PipelineRunImpllinks {
   
-  Link nodes = null;
+  Link? nodes = null;
   
-  Link log = null;
+  Link? log = null;
   
-  Link self = null;
+  Link? self = null;
   
-  Link actions = null;
+  Link? actions = null;
   
-  Link steps = null;
+  Link? steps = null;
   
-  String class_ = null;
+  String? class_ = null;
   PipelineRunImpllinks();
 
   @override
@@ -42,7 +42,7 @@ class PipelineRunImpllinks {
   }
 
   static List<PipelineRunImpllinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineRunImpllinks>() : json.map((value) => new PipelineRunImpllinks.fromJson(value)).toList();
+    return json == null ? <PipelineRunImpllinks>[] : json.map((value) => new PipelineRunImpllinks.fromJson(value)).toList();
   }
 
   static Map<String, PipelineRunImpllinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

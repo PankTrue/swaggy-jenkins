@@ -5,13 +5,13 @@ part of openapi.api;
 class BlueOceanApi {
   final ApiClient apiClient;
 
-  BlueOceanApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  BlueOceanApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// 
   ///
   /// Delete queue item from an organization pipeline queue
   Future deletePipelineQueueItem(String organization, String pipeline, String queue) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -39,7 +39,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -49,7 +49,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'DELETE',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -66,7 +66,7 @@ class BlueOceanApi {
   ///
   /// Retrieve authenticated user details for an organization
   Future<User> getAuthenticatedUser(String organization) async {
-    Object postBody = null;
+    Object? postBody;
 
     // verify required params are set
     if(organization == null) {
@@ -88,7 +88,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -98,7 +98,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -109,14 +109,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'User') as User;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Get a list of class names supported by a given class
   Future<String> getClasses(String class_) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(class_ == null) {
@@ -138,7 +138,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -148,7 +148,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -159,14 +159,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve JSON Web Key
   Future<String> getJsonWebKey(int key) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(key == null) {
@@ -188,7 +188,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -198,7 +198,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -209,14 +209,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve JSON Web Token
-  Future<String> getJsonWebToken({ int expiryTimeInMins, int maxExpiryTimeInMins }) async {
-    Object postBody = null;
+  Future<String> getJsonWebToken({ int? expiryTimeInMins, required int maxExpiryTimeInMins }) async {
+    Object? postBody = null;
 
     // verify required params are set
 
@@ -241,7 +241,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -251,7 +251,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -262,14 +262,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve organization details
   Future<Organisation> getOrganisation(String organization) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -291,7 +291,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -301,7 +301,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -312,14 +312,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'Organisation') as Organisation;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve all organizations details
   Future<Organisations> getOrganisations() async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
 
@@ -338,7 +338,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -348,7 +348,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -359,14 +359,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'Organisations') as Organisations;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve pipeline details for an organization
   Future<Pipeline> getPipeline(String organization, String pipeline) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -391,7 +391,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -401,7 +401,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -412,14 +412,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'Pipeline') as Pipeline;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve all activities details for an organization pipeline
   Future<PipelineActivities> getPipelineActivities(String organization, String pipeline) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -444,7 +444,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -454,7 +454,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -465,14 +465,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineActivities') as PipelineActivities;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve branch details for an organization pipeline
   Future<BranchImpl> getPipelineBranch(String organization, String pipeline, String branch) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -500,7 +500,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -510,7 +510,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -521,14 +521,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'BranchImpl') as BranchImpl;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve branch run details for an organization pipeline
   Future<PipelineRun> getPipelineBranchRun(String organization, String pipeline, String branch, String run) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -559,7 +559,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -569,7 +569,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -580,14 +580,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineRun') as PipelineRun;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve all branches details for an organization pipeline
   Future<MultibranchPipeline> getPipelineBranches(String organization, String pipeline) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -612,7 +612,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -622,7 +622,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -633,14 +633,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'MultibranchPipeline') as MultibranchPipeline;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve pipeline folder for an organization
   Future<PipelineFolderImpl> getPipelineFolder(String organization, String folder) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -665,7 +665,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -675,7 +675,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -686,14 +686,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineFolderImpl') as PipelineFolderImpl;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve pipeline details for an organization folder
   Future<PipelineImpl> getPipelineFolderPipeline(String organization, String pipeline, String folder) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -721,7 +721,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -731,7 +731,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -742,14 +742,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineImpl') as PipelineImpl;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve queue details for an organization pipeline
   Future<PipelineQueue> getPipelineQueue(String organization, String pipeline) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -774,7 +774,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -784,7 +784,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -795,14 +795,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineQueue') as PipelineQueue;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve run details for an organization pipeline
   Future<PipelineRun> getPipelineRun(String organization, String pipeline, String run) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -830,7 +830,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -840,7 +840,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -851,14 +851,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineRun') as PipelineRun;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Get log for a pipeline run
-  Future<String> getPipelineRunLog(String organization, String pipeline, String run, { int start, bool download }) async {
-    Object postBody = null;
+  Future<String> getPipelineRunLog(String organization, String pipeline, String run, { required int start, bool? download }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -892,7 +892,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -902,7 +902,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -913,14 +913,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve run node details for an organization pipeline
   Future<PipelineRunNode> getPipelineRunNode(String organization, String pipeline, String run, String node) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -951,7 +951,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -961,7 +961,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -972,14 +972,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineRunNode') as PipelineRunNode;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve run node details for an organization pipeline
   Future<PipelineStepImpl> getPipelineRunNodeStep(String organization, String pipeline, String run, String node, String step) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1013,7 +1013,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1023,7 +1023,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1034,14 +1034,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineStepImpl') as PipelineStepImpl;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Get log for a pipeline run node step
   Future<String> getPipelineRunNodeStepLog(String organization, String pipeline, String run, String node, String step) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1075,7 +1075,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1085,7 +1085,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1096,14 +1096,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve run node steps details for an organization pipeline
   Future<PipelineRunNodeSteps> getPipelineRunNodeSteps(String organization, String pipeline, String run, String node) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1134,7 +1134,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1144,7 +1144,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1155,14 +1155,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineRunNodeSteps') as PipelineRunNodeSteps;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve run nodes details for an organization pipeline
   Future<PipelineRunNodes> getPipelineRunNodes(String organization, String pipeline, String run) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1190,7 +1190,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1200,7 +1200,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1211,14 +1211,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineRunNodes') as PipelineRunNodes;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve all runs details for an organization pipeline
   Future<PipelineRuns> getPipelineRuns(String organization, String pipeline) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1243,7 +1243,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1253,7 +1253,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1264,14 +1264,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineRuns') as PipelineRuns;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve all pipelines details for an organization
   Future<Pipelines> getPipelines(String organization) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1293,7 +1293,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1303,7 +1303,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1314,14 +1314,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'Pipelines') as Pipelines;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve SCM details for an organization
   Future<GithubScm> getSCM(String organization, String scm) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1346,7 +1346,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1356,7 +1356,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1367,14 +1367,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'GithubScm') as GithubScm;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve SCM organization repositories details for an organization
-  Future<ScmOrganisations> getSCMOrganisationRepositories(String organization, String scm, String scmOrganisation, { String credentialId, int pageSize, int pageNumber }) async {
-    Object postBody = null;
+  Future<ScmOrganisations> getSCMOrganisationRepositories(String organization, String scm, String scmOrganisation, { String? credentialId, required int pageSize, int? pageNumber }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1411,7 +1411,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1421,7 +1421,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1432,14 +1432,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'ScmOrganisations') as ScmOrganisations;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve SCM organization repository details for an organization
   Future<ScmOrganisations> getSCMOrganisationRepository(String organization, String scm, String scmOrganisation, String repository, { String credentialId }) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1473,7 +1473,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1483,7 +1483,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1494,14 +1494,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'ScmOrganisations') as ScmOrganisations;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve SCM organizations details for an organization
-  Future<ScmOrganisations> getSCMOrganisations(String organization, String scm, { String credentialId }) async {
-    Object postBody = null;
+  Future<ScmOrganisations> getSCMOrganisations(String organization, String scm, { String? credentialId }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1529,7 +1529,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1539,7 +1539,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1550,14 +1550,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'ScmOrganisations') as ScmOrganisations;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve user details for an organization
   Future<User> getUser(String organization, String user) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1582,7 +1582,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1592,7 +1592,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1603,14 +1603,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'User') as User;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve user favorites details for an organization
   Future<UserFavorites> getUserFavorites(String user) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(user == null) {
@@ -1632,7 +1632,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1642,7 +1642,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1653,14 +1653,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'UserFavorites') as UserFavorites;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Retrieve users details for an organization
   Future<User> getUsers(String organization) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1682,7 +1682,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1692,7 +1692,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1703,14 +1703,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'User') as User;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Replay an organization pipeline run
   Future<QueueItemImpl> postPipelineRun(String organization, String pipeline, String run) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1738,7 +1738,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1748,7 +1748,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1759,14 +1759,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'QueueItemImpl') as QueueItemImpl;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Start a build for an organization pipeline
   Future<QueueItemImpl> postPipelineRuns(String organization, String pipeline) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1791,7 +1791,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1801,7 +1801,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'POST',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1812,7 +1812,7 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'QueueItemImpl') as QueueItemImpl;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
@@ -1847,7 +1847,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1868,14 +1868,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'FavoriteImpl') as FavoriteImpl;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Stop a build of an organization pipeline
-  Future<PipelineRun> putPipelineRun(String organization, String pipeline, String run, { String blocking, int timeOutInSecs }) async {
-    Object postBody = null;
+  Future<PipelineRun> putPipelineRun(String organization, String pipeline, String run, { String? blocking, required int timeOutInSecs }) async {
+    Object? postBody = null;
 
     // verify required params are set
     if(organization == null) {
@@ -1909,7 +1909,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1919,7 +1919,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'PUT',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1930,14 +1930,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'PipelineRun') as PipelineRun;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Search for any resource details
   Future<String> search(String q) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(q == null) {
@@ -1960,7 +1960,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -1970,7 +1970,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -1981,14 +1981,14 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
   /// 
   ///
   /// Get classes details
   Future<String> searchClasses(String q) async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
     if(q == null) {
@@ -2011,7 +2011,7 @@ class BlueOceanApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -2021,7 +2021,7 @@ class BlueOceanApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -2032,7 +2032,7 @@ class BlueOceanApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'String') as String;
     } else {
-      return null;
+      return null!;
     }
   }
 }

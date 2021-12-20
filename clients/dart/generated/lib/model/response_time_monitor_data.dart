@@ -2,11 +2,11 @@ part of openapi.api;
 
 class ResponseTimeMonitorData {
   
-  String class_ = null;
+  String? class_ = null;
   
-  int timestamp = null;
+  int? timestamp = null;
   
-  int average = null;
+  int? average = null;
   ResponseTimeMonitorData();
 
   @override
@@ -30,7 +30,7 @@ class ResponseTimeMonitorData {
   }
 
   static List<ResponseTimeMonitorData> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ResponseTimeMonitorData>() : json.map((value) => new ResponseTimeMonitorData.fromJson(value)).toList();
+    return json == null ? <ResponseTimeMonitorData>[] : json.map((value) => new ResponseTimeMonitorData.fromJson(value)).toList();
   }
 
   static Map<String, ResponseTimeMonitorData> mapFromJson(Map<String, Map<String, dynamic>> json) {

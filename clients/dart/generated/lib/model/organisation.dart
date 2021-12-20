@@ -2,9 +2,9 @@ part of openapi.api;
 
 class Organisation {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String name = null;
+  String? name = null;
   Organisation();
 
   @override
@@ -26,7 +26,7 @@ class Organisation {
   }
 
   static List<Organisation> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Organisation>() : json.map((value) => new Organisation.fromJson(value)).toList();
+    return json == null ? <Organisation>[] : json.map((value) => new Organisation.fromJson(value)).toList();
   }
 
   static Map<String, Organisation> mapFromJson(Map<String, Map<String, dynamic>> json) {

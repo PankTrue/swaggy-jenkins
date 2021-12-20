@@ -2,9 +2,9 @@ part of openapi.api;
 
 class FavoriteImpllinks {
   
-  Link self = null;
+  Link? self = null;
   
-  String class_ = null;
+  String? class_ = null;
   FavoriteImpllinks();
 
   @override
@@ -26,7 +26,7 @@ class FavoriteImpllinks {
   }
 
   static List<FavoriteImpllinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<FavoriteImpllinks>() : json.map((value) => new FavoriteImpllinks.fromJson(value)).toList();
+    return json == null ? <FavoriteImpllinks>[] : json.map((value) => new FavoriteImpllinks.fromJson(value)).toList();
   }
 
   static Map<String, FavoriteImpllinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

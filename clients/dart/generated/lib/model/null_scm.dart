@@ -2,7 +2,7 @@ part of openapi.api;
 
 class NullSCM {
   
-  String class_ = null;
+  String? class_ = null;
   NullSCM();
 
   @override
@@ -22,7 +22,7 @@ class NullSCM {
   }
 
   static List<NullSCM> listFromJson(List<dynamic> json) {
-    return json == null ? new List<NullSCM>() : json.map((value) => new NullSCM.fromJson(value)).toList();
+    return json == null ? <NullSCM>[] : json.map((value) => new NullSCM.fromJson(value)).toList();
   }
 
   static Map<String, NullSCM> mapFromJson(Map<String, Map<String, dynamic>> json) {

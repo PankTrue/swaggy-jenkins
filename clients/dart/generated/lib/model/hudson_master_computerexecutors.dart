@@ -2,17 +2,17 @@ part of openapi.api;
 
 class HudsonMasterComputerexecutors {
   
-  FreeStyleBuild currentExecutable = null;
+  FreeStyleBuild? currentExecutable = null;
   
-  bool idle = null;
+  bool? idle = null;
   
-  bool likelyStuck = null;
+  bool? likelyStuck = null;
   
-  int number = null;
+  int? number = null;
   
-  int progress = null;
+  int? progress = null;
   
-  String class_ = null;
+  String? class_ = null;
   HudsonMasterComputerexecutors();
 
   @override
@@ -42,7 +42,7 @@ class HudsonMasterComputerexecutors {
   }
 
   static List<HudsonMasterComputerexecutors> listFromJson(List<dynamic> json) {
-    return json == null ? new List<HudsonMasterComputerexecutors>() : json.map((value) => new HudsonMasterComputerexecutors.fromJson(value)).toList();
+    return json == null ? <HudsonMasterComputerexecutors>[] : json.map((value) => new HudsonMasterComputerexecutors.fromJson(value)).toList();
   }
 
   static Map<String, HudsonMasterComputerexecutors> mapFromJson(Map<String, Map<String, dynamic>> json) {

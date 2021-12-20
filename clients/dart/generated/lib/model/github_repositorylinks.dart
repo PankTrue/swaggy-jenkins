@@ -2,9 +2,9 @@ part of openapi.api;
 
 class GithubRepositorylinks {
   
-  Link self = null;
+  Link? self = null;
   
-  String class_ = null;
+  String? class_ = null;
   GithubRepositorylinks();
 
   @override
@@ -26,7 +26,7 @@ class GithubRepositorylinks {
   }
 
   static List<GithubRepositorylinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubRepositorylinks>() : json.map((value) => new GithubRepositorylinks.fromJson(value)).toList();
+    return json == null ? <GithubRepositorylinks>[] : json.map((value) => new GithubRepositorylinks.fromJson(value)).toList();
   }
 
   static Map<String, GithubRepositorylinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,15 +2,15 @@ part of openapi.api;
 
 class BranchImplpermissions {
   
-  bool create = null;
+  bool? create = null;
   
-  bool read = null;
+  bool? read = null;
   
-  bool start = null;
+  bool? start = null;
   
-  bool stop = null;
+  bool? stop = null;
   
-  String class_ = null;
+  String? class_ = null;
   BranchImplpermissions();
 
   @override
@@ -38,7 +38,7 @@ class BranchImplpermissions {
   }
 
   static List<BranchImplpermissions> listFromJson(List<dynamic> json) {
-    return json == null ? new List<BranchImplpermissions>() : json.map((value) => new BranchImplpermissions.fromJson(value)).toList();
+    return json == null ? <BranchImplpermissions>[] : json.map((value) => new BranchImplpermissions.fromJson(value)).toList();
   }
 
   static Map<String, BranchImplpermissions> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,29 +2,29 @@ part of openapi.api;
 
 class QueueBlockedItem {
   
-  String class_ = null;
+  String? class_ = null;
   
   List<CauseAction> actions = [];
   
-  bool blocked = null;
+  bool? blocked = null;
   
-  bool buildable = null;
+  bool? buildable = null;
   
-  int id = null;
+  int? id = null;
   
-  int inQueueSince = null;
+  int? inQueueSince = null;
   
-  String params = null;
+  String? params = null;
   
-  bool stuck = null;
+  bool? stuck = null;
   
-  FreeStyleProject task = null;
+  FreeStyleProject? task = null;
   
-  String url = null;
+  String? url = null;
   
-  String why = null;
+  String? why = null;
   
-  int buildableStartMilliseconds = null;
+  int? buildableStartMilliseconds = null;
   QueueBlockedItem();
 
   @override
@@ -66,7 +66,7 @@ class QueueBlockedItem {
   }
 
   static List<QueueBlockedItem> listFromJson(List<dynamic> json) {
-    return json == null ? new List<QueueBlockedItem>() : json.map((value) => new QueueBlockedItem.fromJson(value)).toList();
+    return json == null ? <QueueBlockedItem>[] : json.map((value) => new QueueBlockedItem.fromJson(value)).toList();
   }
 
   static Map<String, QueueBlockedItem> mapFromJson(Map<String, Map<String, dynamic>> json) {

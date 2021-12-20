@@ -2,7 +2,7 @@ part of openapi.api;
 
 class UnlabeledLoadStatistics {
   
-  String class_ = null;
+  String? class_ = null;
   UnlabeledLoadStatistics();
 
   @override
@@ -22,7 +22,7 @@ class UnlabeledLoadStatistics {
   }
 
   static List<UnlabeledLoadStatistics> listFromJson(List<dynamic> json) {
-    return json == null ? new List<UnlabeledLoadStatistics>() : json.map((value) => new UnlabeledLoadStatistics.fromJson(value)).toList();
+    return json == null ? <UnlabeledLoadStatistics>[] : json.map((value) => new UnlabeledLoadStatistics.fromJson(value)).toList();
   }
 
   static Map<String, UnlabeledLoadStatistics> mapFromJson(Map<String, Map<String, dynamic>> json) {

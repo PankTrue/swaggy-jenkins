@@ -2,11 +2,11 @@ part of openapi.api;
 
 class GithubRespositoryContainer {
   
-  String class_ = null;
+  String? class_ = null;
   
-  GithubRespositoryContainerlinks links = null;
+  GithubRespositoryContainerlinks? links = null;
   
-  GithubRepositories repositories = null;
+  GithubRepositories? repositories = null;
   GithubRespositoryContainer();
 
   @override
@@ -30,7 +30,7 @@ class GithubRespositoryContainer {
   }
 
   static List<GithubRespositoryContainer> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubRespositoryContainer>() : json.map((value) => new GithubRespositoryContainer.fromJson(value)).toList();
+    return json == null ? <GithubRespositoryContainer>[] : json.map((value) => new GithubRespositoryContainer.fromJson(value)).toList();
   }
 
   static Map<String, GithubRespositoryContainer> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -229,19 +229,19 @@ class ApiClient {
           {
             Match match;
             if (value is List &&
-                (match = _RegList.firstMatch(targetType)) != null) {
+                (match = _RegList.firstMatch(targetType) as Match) != null) {
               var newTargetType = match[1];
-              return value.map((v) => _deserialize(v, newTargetType)).toList();
+              return value.map((v) => _deserialize(v, newTargetType!)).toList();
             } else if (value is Map &&
-                (match = _RegMap.firstMatch(targetType)) != null) {
+                (match = _RegMap.firstMatch(targetType) as Match) != null) {
               var newTargetType = match[1];
               return new Map.fromIterables(value.keys,
-                  value.values.map((v) => _deserialize(v, newTargetType)));
+                  value.values.map((v) => _deserialize(v, newTargetType!)));
             }
           }
       }
     } catch (e, stack) {
-      throw new ApiException.withInner(500, 'Exception during deserialization.', e, stack);
+      throw new ApiException.withInner(500, 'Exception during deserialization.', e as Exception, stack);
     }
     throw new ApiException(500, 'Could not find a suitable class for deserialization');
   }
@@ -252,7 +252,7 @@ class ApiClient {
 
     if (targetType == 'String') return json;
 
-    var decodedJson = JSON.decode(json);
+    var decodedJson = jsonDecode(json);
     return _deserialize(decodedJson, targetType);
   }
 
@@ -261,7 +261,7 @@ class ApiClient {
     if (obj == null) {
       serialized = '';
     } else {
-      serialized = JSON.encode(obj);
+      serialized = json.encode(obj);
     }
     return serialized;
   }
@@ -270,7 +270,7 @@ class ApiClient {
   // If collectionFormat is 'multi' a key might appear multiple times.
   Future<Response> invokeAPI(String path,
                              String method,
-                             Iterable<QueryParam> queryParams,
+                             List<QueryParam> queryParams,
                              Object body,
                              Map<String, String> headerParams,
                              Map<String, String> formParams,
@@ -301,15 +301,15 @@ class ApiClient {
       var msgBody = contentType == "application/x-www-form-urlencoded" ? formParams : serialize(body);
       switch(method) {
         case "POST":
-          return client.post(url, headers: headerParams, body: msgBody);
+          return client.post(Uri.parse(url), headers: headerParams, body: msgBody);
         case "PUT":
-          return client.put(url, headers: headerParams, body: msgBody);
+          return client.put(Uri.parse(url), headers: headerParams, body: msgBody);
         case "DELETE":
-          return client.delete(url, headers: headerParams);
+          return client.delete(Uri.parse(url), headers: headerParams);
         case "PATCH":
-          return client.patch(url, headers: headerParams, body: msgBody);
+          return client.patch(Uri.parse(url), headers: headerParams, body: msgBody);
         default:
-          return client.get(url, headers: headerParams);
+          return client.get(Uri.parse(url), headers: headerParams);
       }
     }
   }
@@ -318,7 +318,7 @@ class ApiClient {
   /// @param authNames The authentications to apply
   void _updateParamsForAuth(List<String> authNames, List<QueryParam> queryParams, Map<String, String> headerParams) {
     authNames.forEach((authName) {
-      Authentication auth = _authentications[authName];
+      Authentication? auth = _authentications[authName];
       if (auth == null) throw new ArgumentError("Authentication undefined: " + authName);
       auth.applyToParams(queryParams, headerParams);
     });

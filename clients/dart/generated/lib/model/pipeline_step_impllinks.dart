@@ -2,11 +2,11 @@ part of openapi.api;
 
 class PipelineStepImpllinks {
   
-  Link self = null;
+  Link? self = null;
   
-  Link actions = null;
+  Link? actions = null;
   
-  String class_ = null;
+  String? class_ = null;
   PipelineStepImpllinks();
 
   @override
@@ -30,7 +30,7 @@ class PipelineStepImpllinks {
   }
 
   static List<PipelineStepImpllinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineStepImpllinks>() : json.map((value) => new PipelineStepImpllinks.fromJson(value)).toList();
+    return json == null ? <PipelineStepImpllinks>[] : json.map((value) => new PipelineStepImpllinks.fromJson(value)).toList();
   }
 
   static Map<String, PipelineStepImpllinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

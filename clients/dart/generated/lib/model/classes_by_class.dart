@@ -4,7 +4,7 @@ class ClassesByClass {
   
   List<String> classes = [];
   
-  String class_ = null;
+  String? class_ = null;
   ClassesByClass();
 
   @override
@@ -26,7 +26,7 @@ class ClassesByClass {
   }
 
   static List<ClassesByClass> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ClassesByClass>() : json.map((value) => new ClassesByClass.fromJson(value)).toList();
+    return json == null ? <ClassesByClass>[] : json.map((value) => new ClassesByClass.fromJson(value)).toList();
   }
 
   static Map<String, ClassesByClass> mapFromJson(Map<String, Map<String, dynamic>> json) {

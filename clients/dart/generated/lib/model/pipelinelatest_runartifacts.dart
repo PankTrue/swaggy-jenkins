@@ -2,13 +2,13 @@ part of openapi.api;
 
 class PipelinelatestRunartifacts {
   
-  String name = null;
+  String? name = null;
   
-  int size = null;
+  int? size = null;
   
-  String url = null;
+  String? url = null;
   
-  String class_ = null;
+  String? class_ = null;
   PipelinelatestRunartifacts();
 
   @override
@@ -34,7 +34,7 @@ class PipelinelatestRunartifacts {
   }
 
   static List<PipelinelatestRunartifacts> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelinelatestRunartifacts>() : json.map((value) => new PipelinelatestRunartifacts.fromJson(value)).toList();
+    return json == null ? <PipelinelatestRunartifacts>[] : json.map((value) => new PipelinelatestRunartifacts.fromJson(value)).toList();
   }
 
   static Map<String, PipelinelatestRunartifacts> mapFromJson(Map<String, Map<String, dynamic>> json) {

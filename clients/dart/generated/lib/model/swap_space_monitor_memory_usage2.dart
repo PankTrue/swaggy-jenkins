@@ -2,15 +2,15 @@ part of openapi.api;
 
 class SwapSpaceMonitorMemoryUsage2 {
   
-  String class_ = null;
+  String? class_ = null;
   
-  int availablePhysicalMemory = null;
+  int? availablePhysicalMemory = null;
   
-  int availableSwapSpace = null;
+  int? availableSwapSpace = null;
   
-  int totalPhysicalMemory = null;
+  int? totalPhysicalMemory = null;
   
-  int totalSwapSpace = null;
+  int? totalSwapSpace = null;
   SwapSpaceMonitorMemoryUsage2();
 
   @override
@@ -38,7 +38,7 @@ class SwapSpaceMonitorMemoryUsage2 {
   }
 
   static List<SwapSpaceMonitorMemoryUsage2> listFromJson(List<dynamic> json) {
-    return json == null ? new List<SwapSpaceMonitorMemoryUsage2>() : json.map((value) => new SwapSpaceMonitorMemoryUsage2.fromJson(value)).toList();
+    return json == null ? <SwapSpaceMonitorMemoryUsage2>[] : json.map((value) => new SwapSpaceMonitorMemoryUsage2.fromJson(value)).toList();
   }
 
   static Map<String, SwapSpaceMonitorMemoryUsage2> mapFromJson(Map<String, Map<String, dynamic>> json) {

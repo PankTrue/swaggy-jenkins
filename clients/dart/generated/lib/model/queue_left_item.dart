@@ -2,31 +2,31 @@ part of openapi.api;
 
 class QueueLeftItem {
   
-  String class_ = null;
+  String? class_ = null;
   
   List<CauseAction> actions = [];
   
-  bool blocked = null;
+  bool? blocked = null;
   
-  bool buildable = null;
+  bool? buildable = null;
   
-  int id = null;
+  int? id = null;
   
-  int inQueueSince = null;
+  int? inQueueSince = null;
   
-  String params = null;
+  String? params = null;
   
-  bool stuck = null;
+  bool? stuck = null;
   
-  FreeStyleProject task = null;
+  FreeStyleProject? task = null;
   
-  String url = null;
+  String? url = null;
   
-  String why = null;
+  String? why = null;
   
-  bool cancelled = null;
+  bool? cancelled = null;
   
-  FreeStyleBuild executable = null;
+  FreeStyleBuild? executable = null;
   QueueLeftItem();
 
   @override
@@ -70,7 +70,7 @@ class QueueLeftItem {
   }
 
   static List<QueueLeftItem> listFromJson(List<dynamic> json) {
-    return json == null ? new List<QueueLeftItem>() : json.map((value) => new QueueLeftItem.fromJson(value)).toList();
+    return json == null ? <QueueLeftItem>[] : json.map((value) => new QueueLeftItem.fromJson(value)).toList();
   }
 
   static Map<String, QueueLeftItem> mapFromJson(Map<String, Map<String, dynamic>> json) {

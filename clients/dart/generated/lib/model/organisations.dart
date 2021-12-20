@@ -18,7 +18,7 @@ class Organisations {
   }
 
   static List<Organisations> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Organisations>() : json.map((value) => new Organisations.fromJson(value)).toList();
+    return json == null ? <Organisations>[] : json.map((value) => new Organisations.fromJson(value)).toList();
   }
 
   static Map<String, Organisations> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,15 +2,15 @@ part of openapi.api;
 
 class GithubScm {
   
-  String class_ = null;
+  String? class_ = null;
   
-  GithubScmlinks links = null;
+  GithubScmlinks? links = null;
   
-  String credentialId = null;
+  String? credentialId = null;
   
-  String id = null;
+  String? id = null;
   
-  String uri = null;
+  String? uri = null;
   GithubScm();
 
   @override
@@ -38,7 +38,7 @@ class GithubScm {
   }
 
   static List<GithubScm> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubScm>() : json.map((value) => new GithubScm.fromJson(value)).toList();
+    return json == null ? <GithubScm>[] : json.map((value) => new GithubScm.fromJson(value)).toList();
   }
 
   static Map<String, GithubScm> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,31 +2,31 @@ part of openapi.api;
 
 class BranchImpl {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  int estimatedDurationInMillis = null;
+  int? estimatedDurationInMillis = null;
   
-  String fullDisplayName = null;
+  String? fullDisplayName = null;
   
-  String fullName = null;
+  String? fullName = null;
   
-  String name = null;
+  String? name = null;
   
-  String organization = null;
+  String? organization = null;
   
   List<StringParameterDefinition> parameters = [];
   
-  BranchImplpermissions permissions = null;
+  BranchImplpermissions? permissions = null;
   
-  int weatherScore = null;
+  int? weatherScore = null;
   
-  String pullRequest = null;
+  String? pullRequest = null;
   
-  BranchImpllinks links = null;
+  BranchImpllinks? links = null;
   
-  PipelineRunImpl latestRun = null;
+  PipelineRunImpl? latestRun = null;
   BranchImpl();
 
   @override
@@ -70,7 +70,7 @@ class BranchImpl {
   }
 
   static List<BranchImpl> listFromJson(List<dynamic> json) {
-    return json == null ? new List<BranchImpl>() : json.map((value) => new BranchImpl.fromJson(value)).toList();
+    return json == null ? <BranchImpl>[] : json.map((value) => new BranchImpl.fromJson(value)).toList();
   }
 
   static Map<String, BranchImpl> mapFromJson(Map<String, Map<String, dynamic>> json) {

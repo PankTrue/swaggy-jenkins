@@ -2,21 +2,21 @@ part of openapi.api;
 
 class GithubRepository {
   
-  String class_ = null;
+  String? class_ = null;
   
-  GithubRepositorylinks links = null;
+  GithubRepositorylinks? links = null;
   
-  String defaultBranch = null;
+  String? defaultBranch = null;
   
-  String description = null;
+  String? description = null;
   
-  String name = null;
+  String? name = null;
   
-  GithubRepositorypermissions permissions = null;
+  GithubRepositorypermissions? permissions = null;
   
-  bool private = null;
+  bool? private = null;
   
-  String fullName = null;
+  String? fullName = null;
   GithubRepository();
 
   @override
@@ -50,7 +50,7 @@ class GithubRepository {
   }
 
   static List<GithubRepository> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubRepository>() : json.map((value) => new GithubRepository.fromJson(value)).toList();
+    return json == null ? <GithubRepository>[] : json.map((value) => new GithubRepository.fromJson(value)).toList();
   }
 
   static Map<String, GithubRepository> mapFromJson(Map<String, Map<String, dynamic>> json) {

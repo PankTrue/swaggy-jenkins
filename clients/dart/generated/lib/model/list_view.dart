@@ -2,15 +2,15 @@ part of openapi.api;
 
 class ListView {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String description = null;
+  String? description = null;
   
   List<FreeStyleProject> jobs = [];
   
-  String name = null;
+  String? name = null;
   
-  String url = null;
+  String? url = null;
   ListView();
 
   @override
@@ -38,7 +38,7 @@ class ListView {
   }
 
   static List<ListView> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ListView>() : json.map((value) => new ListView.fromJson(value)).toList();
+    return json == null ? <ListView>[] : json.map((value) => new ListView.fromJson(value)).toList();
   }
 
   static Map<String, ListView> mapFromJson(Map<String, Map<String, dynamic>> json) {

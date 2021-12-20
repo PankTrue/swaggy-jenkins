@@ -18,7 +18,7 @@ class ScmOrganisations {
   }
 
   static List<ScmOrganisations> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ScmOrganisations>() : json.map((value) => new ScmOrganisations.fromJson(value)).toList();
+    return json == null ? <ScmOrganisations>[] : json.map((value) => new ScmOrganisations.fromJson(value)).toList();
   }
 
   static Map<String, ScmOrganisations> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,9 +2,9 @@ part of openapi.api;
 
 class ExtensionClassContainerImpl1links {
   
-  Link self = null;
+  Link? self = null;
   
-  String class_ = null;
+  String? class_ = null;
   ExtensionClassContainerImpl1links();
 
   @override
@@ -26,7 +26,7 @@ class ExtensionClassContainerImpl1links {
   }
 
   static List<ExtensionClassContainerImpl1links> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ExtensionClassContainerImpl1links>() : json.map((value) => new ExtensionClassContainerImpl1links.fromJson(value)).toList();
+    return json == null ? <ExtensionClassContainerImpl1links>[] : json.map((value) => new ExtensionClassContainerImpl1links.fromJson(value)).toList();
   }
 
   static Map<String, ExtensionClassContainerImpl1links> mapFromJson(Map<String, Map<String, dynamic>> json) {

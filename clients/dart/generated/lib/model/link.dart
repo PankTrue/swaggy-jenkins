@@ -2,9 +2,9 @@ part of openapi.api;
 
 class Link {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String href = null;
+  String? href = null;
   Link();
 
   @override
@@ -26,7 +26,7 @@ class Link {
   }
 
   static List<Link> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Link>() : json.map((value) => new Link.fromJson(value)).toList();
+    return json == null ? <Link>[] : json.map((value) => new Link.fromJson(value)).toList();
   }
 
   static Map<String, Link> mapFromJson(Map<String, Map<String, dynamic>> json) {

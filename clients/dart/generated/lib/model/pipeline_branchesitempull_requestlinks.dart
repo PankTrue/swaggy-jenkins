@@ -2,9 +2,9 @@ part of openapi.api;
 
 class PipelineBranchesitempullRequestlinks {
   
-  String self = null;
+  String? self = null;
   
-  String class_ = null;
+  String? class_ = null;
   PipelineBranchesitempullRequestlinks();
 
   @override
@@ -26,7 +26,7 @@ class PipelineBranchesitempullRequestlinks {
   }
 
   static List<PipelineBranchesitempullRequestlinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineBranchesitempullRequestlinks>() : json.map((value) => new PipelineBranchesitempullRequestlinks.fromJson(value)).toList();
+    return json == null ? <PipelineBranchesitempullRequestlinks>[] : json.map((value) => new PipelineBranchesitempullRequestlinks.fromJson(value)).toList();
   }
 
   static Map<String, PipelineBranchesitempullRequestlinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,19 +2,19 @@ part of openapi.api;
 
 class InputStepImpl {
   
-  String class_ = null;
+  String? class_ = null;
   
-  InputStepImpllinks links = null;
+  InputStepImpllinks? links = null;
   
-  String id = null;
+  String? id = null;
   
-  String message = null;
+  String? message = null;
   
-  String ok = null;
+  String? ok = null;
   
   List<StringParameterDefinition> parameters = [];
   
-  String submitter = null;
+  String? submitter = null;
   InputStepImpl();
 
   @override
@@ -46,7 +46,7 @@ class InputStepImpl {
   }
 
   static List<InputStepImpl> listFromJson(List<dynamic> json) {
-    return json == null ? new List<InputStepImpl>() : json.map((value) => new InputStepImpl.fromJson(value)).toList();
+    return json == null ? <InputStepImpl>[] : json.map((value) => new InputStepImpl.fromJson(value)).toList();
   }
 
   static Map<String, InputStepImpl> mapFromJson(Map<String, Map<String, dynamic>> json) {

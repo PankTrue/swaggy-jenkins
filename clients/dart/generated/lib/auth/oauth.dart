@@ -3,7 +3,7 @@ part of openapi.api;
 class OAuth implements Authentication {
   String accessToken;
 
-  OAuth({this.accessToken}) {
+  OAuth({required this.accessToken}) {
   }
 
   @override

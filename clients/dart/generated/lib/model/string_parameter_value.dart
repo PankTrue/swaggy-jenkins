@@ -2,11 +2,11 @@ part of openapi.api;
 
 class StringParameterValue {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String name = null;
+  String? name = null;
   
-  String value = null;
+  String? value = null;
   StringParameterValue();
 
   @override
@@ -30,7 +30,7 @@ class StringParameterValue {
   }
 
   static List<StringParameterValue> listFromJson(List<dynamic> json) {
-    return json == null ? new List<StringParameterValue>() : json.map((value) => new StringParameterValue.fromJson(value)).toList();
+    return json == null ? <StringParameterValue>[] : json.map((value) => new StringParameterValue.fromJson(value)).toList();
   }
 
   static Map<String, StringParameterValue> mapFromJson(Map<String, Map<String, dynamic>> json) {

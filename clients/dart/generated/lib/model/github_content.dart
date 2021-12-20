@@ -2,21 +2,21 @@ part of openapi.api;
 
 class GithubContent {
   
-  String name = null;
+  String? name = null;
   
-  String sha = null;
+  String? sha = null;
   
-  String class_ = null;
+  String? class_ = null;
   
-  String repo = null;
+  String? repo = null;
   
-  int size = null;
+  int? size = null;
   
-  String owner = null;
+  String? owner = null;
   
-  String path = null;
+  String? path = null;
   
-  String base64Data = null;
+  String? base64Data = null;
   GithubContent();
 
   @override
@@ -50,7 +50,7 @@ class GithubContent {
   }
 
   static List<GithubContent> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubContent>() : json.map((value) => new GithubContent.fromJson(value)).toList();
+    return json == null ? <GithubContent>[] : json.map((value) => new GithubContent.fromJson(value)).toList();
   }
 
   static Map<String, GithubContent> mapFromJson(Map<String, Map<String, dynamic>> json) {

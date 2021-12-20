@@ -2,9 +2,9 @@ part of openapi.api;
 
 class PipelineRunNodeedges {
   
-  String id = null;
+  String? id = null;
   
-  String class_ = null;
+  String? class_ = null;
   PipelineRunNodeedges();
 
   @override
@@ -26,7 +26,7 @@ class PipelineRunNodeedges {
   }
 
   static List<PipelineRunNodeedges> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineRunNodeedges>() : json.map((value) => new PipelineRunNodeedges.fromJson(value)).toList();
+    return json == null ? <PipelineRunNodeedges>[] : json.map((value) => new PipelineRunNodeedges.fromJson(value)).toList();
   }
 
   static Map<String, PipelineRunNodeedges> mapFromJson(Map<String, Map<String, dynamic>> json) {

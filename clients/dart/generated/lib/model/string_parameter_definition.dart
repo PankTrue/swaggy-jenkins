@@ -2,15 +2,15 @@ part of openapi.api;
 
 class StringParameterDefinition {
   
-  String class_ = null;
+  String? class_ = null;
   
-  StringParameterValue defaultParameterValue = null;
+  StringParameterValue? defaultParameterValue = null;
   
-  String description = null;
+  String? description = null;
   
-  String name = null;
+  String? name = null;
   
-  String type = null;
+  String? type = null;
   StringParameterDefinition();
 
   @override
@@ -38,7 +38,7 @@ class StringParameterDefinition {
   }
 
   static List<StringParameterDefinition> listFromJson(List<dynamic> json) {
-    return json == null ? new List<StringParameterDefinition>() : json.map((value) => new StringParameterDefinition.fromJson(value)).toList();
+    return json == null ? <StringParameterDefinition>[] : json.map((value) => new StringParameterDefinition.fromJson(value)).toList();
   }
 
   static Map<String, StringParameterDefinition> mapFromJson(Map<String, Map<String, dynamic>> json) {

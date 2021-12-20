@@ -2,41 +2,41 @@ part of openapi.api;
 
 class FreeStyleBuild {
   
-  String class_ = null;
+  String? class_ = null;
   
-  int number = null;
+  int? number = null;
   
-  String url = null;
+  String? url = null;
   
   List<CauseAction> actions = [];
   
-  bool building = null;
+  bool? building = null;
   
-  String description = null;
+  String? description = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  int duration = null;
+  int? duration = null;
   
-  int estimatedDuration = null;
+  int? estimatedDuration = null;
   
-  String executor = null;
+  String? executor = null;
   
-  String fullDisplayName = null;
+  String? fullDisplayName = null;
   
-  String id = null;
+  String? id = null;
   
-  bool keepLog = null;
+  bool? keepLog = null;
   
-  int queueId = null;
+  int? queueId = null;
   
-  String result = null;
+  String? result = null;
   
-  int timestamp = null;
+  int? timestamp = null;
   
-  String builtOn = null;
+  String? builtOn = null;
   
-  EmptyChangeLogSet changeSet = null;
+  EmptyChangeLogSet? changeSet = null;
   FreeStyleBuild();
 
   @override
@@ -90,7 +90,7 @@ class FreeStyleBuild {
   }
 
   static List<FreeStyleBuild> listFromJson(List<dynamic> json) {
-    return json == null ? new List<FreeStyleBuild>() : json.map((value) => new FreeStyleBuild.fromJson(value)).toList();
+    return json == null ? <FreeStyleBuild>[] : json.map((value) => new FreeStyleBuild.fromJson(value)).toList();
   }
 
   static Map<String, FreeStyleBuild> mapFromJson(Map<String, Map<String, dynamic>> json) {

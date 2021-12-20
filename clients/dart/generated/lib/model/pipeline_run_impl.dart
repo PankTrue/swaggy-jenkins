@@ -2,35 +2,35 @@ part of openapi.api;
 
 class PipelineRunImpl {
   
-  String class_ = null;
+  String? class_ = null;
   
-  PipelineRunImpllinks links = null;
+  PipelineRunImpllinks? links = null;
   
-  int durationInMillis = null;
+  int? durationInMillis = null;
   
-  String enQueueTime = null;
+  String? enQueueTime = null;
   
-  String endTime = null;
+  String? endTime = null;
   
-  int estimatedDurationInMillis = null;
+  int? estimatedDurationInMillis = null;
   
-  String id = null;
+  String? id = null;
   
-  String organization = null;
+  String? organization = null;
   
-  String pipeline = null;
+  String? pipeline = null;
   
-  String result = null;
+  String? result = null;
   
-  String runSummary = null;
+  String? runSummary = null;
   
-  String startTime = null;
+  String? startTime = null;
   
-  String state = null;
+  String? state = null;
   
-  String type = null;
+  String? type = null;
   
-  String commitId = null;
+  String? commitId = null;
   PipelineRunImpl();
 
   @override
@@ -78,7 +78,7 @@ class PipelineRunImpl {
   }
 
   static List<PipelineRunImpl> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineRunImpl>() : json.map((value) => new PipelineRunImpl.fromJson(value)).toList();
+    return json == null ? <PipelineRunImpl>[] : json.map((value) => new PipelineRunImpl.fromJson(value)).toList();
   }
 
   static Map<String, PipelineRunImpl> mapFromJson(Map<String, Map<String, dynamic>> json) {

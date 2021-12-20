@@ -2,16 +2,17 @@ part of openapi.api;
 
 
 
+
 class BaseRemoteAccessApi {
   final ApiClient apiClient;
 
-  BaseRemoteAccessApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  BaseRemoteAccessApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// 
   ///
   /// Retrieve CSRF protection token
   Future<DefaultCrumbIssuer> getCrumb() async {
-    Object postBody = null;
+    Object? postBody = null;
 
     // verify required params are set
 
@@ -30,7 +31,7 @@ class BaseRemoteAccessApi {
 
     if(contentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = new MultipartRequest(null, null);
+      MultipartRequest mp = new MultipartRequest(null!, null!);
       if(hasFields)
         postBody = mp;
     }
@@ -40,7 +41,7 @@ class BaseRemoteAccessApi {
     var response = await apiClient.invokeAPI(path,
                                              'GET',
                                              queryParams,
-                                             postBody,
+                                             postBody!,
                                              headerParams,
                                              formParams,
                                              contentType,
@@ -51,7 +52,7 @@ class BaseRemoteAccessApi {
     } else if(response.body != null) {
       return apiClient.deserialize(response.body, 'DefaultCrumbIssuer') as DefaultCrumbIssuer;
     } else {
-      return null;
+      return null!;
     }
   }
 }

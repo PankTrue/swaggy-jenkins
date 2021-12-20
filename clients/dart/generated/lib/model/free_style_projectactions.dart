@@ -2,7 +2,7 @@ part of openapi.api;
 
 class FreeStyleProjectactions {
   
-  String class_ = null;
+  String? class_ = null;
   FreeStyleProjectactions();
 
   @override
@@ -22,7 +22,7 @@ class FreeStyleProjectactions {
   }
 
   static List<FreeStyleProjectactions> listFromJson(List<dynamic> json) {
-    return json == null ? new List<FreeStyleProjectactions>() : json.map((value) => new FreeStyleProjectactions.fromJson(value)).toList();
+    return json == null ? <FreeStyleProjectactions>[] : json.map((value) => new FreeStyleProjectactions.fromJson(value)).toList();
   }
 
   static Map<String, FreeStyleProjectactions> mapFromJson(Map<String, Map<String, dynamic>> json) {

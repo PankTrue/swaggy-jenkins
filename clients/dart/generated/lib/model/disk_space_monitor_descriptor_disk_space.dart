@@ -2,13 +2,13 @@ part of openapi.api;
 
 class DiskSpaceMonitorDescriptorDiskSpace {
   
-  String class_ = null;
+  String? class_ = null;
   
-  int timestamp = null;
+  int? timestamp = null;
   
-  String path = null;
+  String? path = null;
   
-  int size = null;
+  int? size = null;
   DiskSpaceMonitorDescriptorDiskSpace();
 
   @override
@@ -34,7 +34,7 @@ class DiskSpaceMonitorDescriptorDiskSpace {
   }
 
   static List<DiskSpaceMonitorDescriptorDiskSpace> listFromJson(List<dynamic> json) {
-    return json == null ? new List<DiskSpaceMonitorDescriptorDiskSpace>() : json.map((value) => new DiskSpaceMonitorDescriptorDiskSpace.fromJson(value)).toList();
+    return json == null ? <DiskSpaceMonitorDescriptorDiskSpace>[] : json.map((value) => new DiskSpaceMonitorDescriptorDiskSpace.fromJson(value)).toList();
   }
 
   static Map<String, DiskSpaceMonitorDescriptorDiskSpace> mapFromJson(Map<String, Map<String, dynamic>> json) {

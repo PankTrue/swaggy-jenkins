@@ -2,7 +2,7 @@ part of openapi.api;
 
 class Label1 {
   
-  String class_ = null;
+  String? class_ = null;
   Label1();
 
   @override
@@ -22,7 +22,7 @@ class Label1 {
   }
 
   static List<Label1> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Label1>() : json.map((value) => new Label1.fromJson(value)).toList();
+    return json == null ? <Label1>[] : json.map((value) => new Label1.fromJson(value)).toList();
   }
 
   static Map<String, Label1> mapFromJson(Map<String, Map<String, dynamic>> json) {

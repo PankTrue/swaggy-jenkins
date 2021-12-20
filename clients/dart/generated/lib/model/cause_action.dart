@@ -2,7 +2,7 @@ part of openapi.api;
 
 class CauseAction {
   
-  String class_ = null;
+  String? class_ = null;
   
   List<CauseUserIdCause> causes = [];
   CauseAction();
@@ -26,7 +26,7 @@ class CauseAction {
   }
 
   static List<CauseAction> listFromJson(List<dynamic> json) {
-    return json == null ? new List<CauseAction>() : json.map((value) => new CauseAction.fromJson(value)).toList();
+    return json == null ? <CauseAction>[] : json.map((value) => new CauseAction.fromJson(value)).toList();
   }
 
   static Map<String, CauseAction> mapFromJson(Map<String, Map<String, dynamic>> json) {

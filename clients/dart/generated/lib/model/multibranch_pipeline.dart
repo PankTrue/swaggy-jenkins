@@ -2,33 +2,33 @@ part of openapi.api;
 
 class MultibranchPipeline {
   
-  String displayName = null;
+  String? displayName = null;
   
-  int estimatedDurationInMillis = null;
+  int? estimatedDurationInMillis = null;
   
-  String latestRun = null;
+  String? latestRun = null;
   
-  String name = null;
+  String? name = null;
   
-  String organization = null;
+  String? organization = null;
   
-  int weatherScore = null;
+  int? weatherScore = null;
   
   List<String> branchNames = [];
   
-  int numberOfFailingBranches = null;
+  int? numberOfFailingBranches = null;
   
-  int numberOfFailingPullRequests = null;
+  int? numberOfFailingPullRequests = null;
   
-  int numberOfSuccessfulBranches = null;
+  int? numberOfSuccessfulBranches = null;
   
-  int numberOfSuccessfulPullRequests = null;
+  int? numberOfSuccessfulPullRequests = null;
   
-  int totalNumberOfBranches = null;
+  int? totalNumberOfBranches = null;
   
-  int totalNumberOfPullRequests = null;
+  int? totalNumberOfPullRequests = null;
   
-  String class_ = null;
+  String? class_ = null;
   MultibranchPipeline();
 
   @override
@@ -74,7 +74,7 @@ class MultibranchPipeline {
   }
 
   static List<MultibranchPipeline> listFromJson(List<dynamic> json) {
-    return json == null ? new List<MultibranchPipeline>() : json.map((value) => new MultibranchPipeline.fromJson(value)).toList();
+    return json == null ? <MultibranchPipeline>[] : json.map((value) => new MultibranchPipeline.fromJson(value)).toList();
   }
 
   static Map<String, MultibranchPipeline> mapFromJson(Map<String, Map<String, dynamic>> json) {

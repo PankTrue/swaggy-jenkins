@@ -2,21 +2,21 @@ part of openapi.api;
 
 class Pipeline {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String organization = null;
+  String? organization = null;
   
-  String name = null;
+  String? name = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  String fullName = null;
+  String? fullName = null;
   
-  int weatherScore = null;
+  int? weatherScore = null;
   
-  int estimatedDurationInMillis = null;
+  int? estimatedDurationInMillis = null;
   
-  PipelinelatestRun latestRun = null;
+  PipelinelatestRun? latestRun = null;
   Pipeline();
 
   @override
@@ -50,7 +50,7 @@ class Pipeline {
   }
 
   static List<Pipeline> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Pipeline>() : json.map((value) => new Pipeline.fromJson(value)).toList();
+    return json == null ? <Pipeline>[] : json.map((value) => new Pipeline.fromJson(value)).toList();
   }
 
   static Map<String, Pipeline> mapFromJson(Map<String, Map<String, dynamic>> json) {

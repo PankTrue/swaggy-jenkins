@@ -2,19 +2,19 @@ part of openapi.api;
 
 class HudsonMasterComputermonitorData {
   
-  SwapSpaceMonitorMemoryUsage2 hudsonNodeMonitorsSwapSpaceMonitor = null;
+  SwapSpaceMonitorMemoryUsage2? hudsonNodeMonitorsSwapSpaceMonitor = null;
   
-  DiskSpaceMonitorDescriptorDiskSpace hudsonNodeMonitorsTemporarySpaceMonitor = null;
+  DiskSpaceMonitorDescriptorDiskSpace? hudsonNodeMonitorsTemporarySpaceMonitor = null;
   
-  DiskSpaceMonitorDescriptorDiskSpace hudsonNodeMonitorsDiskSpaceMonitor = null;
+  DiskSpaceMonitorDescriptorDiskSpace? hudsonNodeMonitorsDiskSpaceMonitor = null;
   
-  String hudsonNodeMonitorsArchitectureMonitor = null;
+  String? hudsonNodeMonitorsArchitectureMonitor = null;
   
-  ResponseTimeMonitorData hudsonNodeMonitorsResponseTimeMonitor = null;
+  ResponseTimeMonitorData? hudsonNodeMonitorsResponseTimeMonitor = null;
   
-  ClockDifference hudsonNodeMonitorsClockMonitor = null;
+  ClockDifference? hudsonNodeMonitorsClockMonitor = null;
   
-  String class_ = null;
+  String? class_ = null;
   HudsonMasterComputermonitorData();
 
   @override
@@ -46,7 +46,7 @@ class HudsonMasterComputermonitorData {
   }
 
   static List<HudsonMasterComputermonitorData> listFromJson(List<dynamic> json) {
-    return json == null ? new List<HudsonMasterComputermonitorData>() : json.map((value) => new HudsonMasterComputermonitorData.fromJson(value)).toList();
+    return json == null ? <HudsonMasterComputermonitorData>[] : json.map((value) => new HudsonMasterComputermonitorData.fromJson(value)).toList();
   }
 
   static Map<String, HudsonMasterComputermonitorData> mapFromJson(Map<String, Map<String, dynamic>> json) {

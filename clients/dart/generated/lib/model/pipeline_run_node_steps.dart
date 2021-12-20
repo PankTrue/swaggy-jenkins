@@ -18,7 +18,7 @@ class PipelineRunNodeSteps {
   }
 
   static List<PipelineRunNodeSteps> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineRunNodeSteps>() : json.map((value) => new PipelineRunNodeSteps.fromJson(value)).toList();
+    return json == null ? <PipelineRunNodeSteps>[] : json.map((value) => new PipelineRunNodeSteps.fromJson(value)).toList();
   }
 
   static Map<String, PipelineRunNodeSteps> mapFromJson(Map<String, Map<String, dynamic>> json) {

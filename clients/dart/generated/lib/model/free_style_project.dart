@@ -2,59 +2,59 @@ part of openapi.api;
 
 class FreeStyleProject {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String name = null;
+  String? name = null;
   
-  String url = null;
+  String? url = null;
   
-  String color = null;
+  String? color = null;
   
   List<FreeStyleProjectactions> actions = [];
   
-  String description = null;
+  String? description = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  String displayNameOrNull = null;
+  String? displayNameOrNull = null;
   
-  String fullDisplayName = null;
+  String? fullDisplayName = null;
   
-  String fullName = null;
+  String? fullName = null;
   
-  bool buildable = null;
+  bool? buildable = null;
   
   List<FreeStyleBuild> builds = [];
   
-  FreeStyleBuild firstBuild = null;
+  FreeStyleBuild? firstBuild = null;
   
   List<FreeStyleProjecthealthReport> healthReport = [];
   
-  bool inQueue = null;
+  bool? inQueue = null;
   
-  bool keepDependencies = null;
+  bool? keepDependencies = null;
   
-  FreeStyleBuild lastBuild = null;
+  FreeStyleBuild? lastBuild = null;
   
-  FreeStyleBuild lastCompletedBuild = null;
+  FreeStyleBuild? lastCompletedBuild = null;
   
-  String lastFailedBuild = null;
+  String? lastFailedBuild = null;
   
-  FreeStyleBuild lastStableBuild = null;
+  FreeStyleBuild? lastStableBuild = null;
   
-  FreeStyleBuild lastSuccessfulBuild = null;
+  FreeStyleBuild? lastSuccessfulBuild = null;
   
-  String lastUnstableBuild = null;
+  String? lastUnstableBuild = null;
   
-  String lastUnsuccessfulBuild = null;
+  String? lastUnsuccessfulBuild = null;
   
-  int nextBuildNumber = null;
+  int? nextBuildNumber = null;
   
-  String queueItem = null;
+  String? queueItem = null;
   
-  bool concurrentBuild = null;
+  bool? concurrentBuild = null;
   
-  NullSCM scm = null;
+  NullSCM? scm = null;
   FreeStyleProject();
 
   @override
@@ -126,7 +126,7 @@ class FreeStyleProject {
   }
 
   static List<FreeStyleProject> listFromJson(List<dynamic> json) {
-    return json == null ? new List<FreeStyleProject>() : json.map((value) => new FreeStyleProject.fromJson(value)).toList();
+    return json == null ? <FreeStyleProject>[] : json.map((value) => new FreeStyleProject.fromJson(value)).toList();
   }
 
   static Map<String, FreeStyleProject> mapFromJson(Map<String, Map<String, dynamic>> json) {

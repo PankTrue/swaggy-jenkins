@@ -2,9 +2,9 @@ part of openapi.api;
 
 class EmptyChangeLogSet {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String kind = null;
+  String? kind = null;
   EmptyChangeLogSet();
 
   @override
@@ -26,7 +26,7 @@ class EmptyChangeLogSet {
   }
 
   static List<EmptyChangeLogSet> listFromJson(List<dynamic> json) {
-    return json == null ? new List<EmptyChangeLogSet>() : json.map((value) => new EmptyChangeLogSet.fromJson(value)).toList();
+    return json == null ? <EmptyChangeLogSet>[] : json.map((value) => new EmptyChangeLogSet.fromJson(value)).toList();
   }
 
   static Map<String, EmptyChangeLogSet> mapFromJson(Map<String, Map<String, dynamic>> json) {

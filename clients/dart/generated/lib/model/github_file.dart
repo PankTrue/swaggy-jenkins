@@ -2,9 +2,9 @@ part of openapi.api;
 
 class GithubFile {
   
-  GithubContent content = null;
+  GithubContent? content = null;
   
-  String class_ = null;
+  String? class_ = null;
   GithubFile();
 
   @override
@@ -26,7 +26,7 @@ class GithubFile {
   }
 
   static List<GithubFile> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubFile>() : json.map((value) => new GithubFile.fromJson(value)).toList();
+    return json == null ? <GithubFile>[] : json.map((value) => new GithubFile.fromJson(value)).toList();
   }
 
   static Map<String, GithubFile> mapFromJson(Map<String, Map<String, dynamic>> json) {

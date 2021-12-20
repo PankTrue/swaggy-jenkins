@@ -2,15 +2,15 @@ part of openapi.api;
 
 class User {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String id = null;
+  String? id = null;
   
-  String fullName = null;
+  String? fullName = null;
   
-  String email = null;
+  String? email = null;
   
-  String name = null;
+  String? name = null;
   User();
 
   @override
@@ -38,7 +38,7 @@ class User {
   }
 
   static List<User> listFromJson(List<dynamic> json) {
-    return json == null ? new List<User>() : json.map((value) => new User.fromJson(value)).toList();
+    return json == null ? <User>[] : json.map((value) => new User.fromJson(value)).toList();
   }
 
   static Map<String, User> mapFromJson(Map<String, Map<String, dynamic>> json) {

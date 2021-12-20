@@ -2,13 +2,13 @@ part of openapi.api;
 
 class CauseUserIdCause {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String shortDescription = null;
+  String? shortDescription = null;
   
-  String userId = null;
+  String? userId = null;
   
-  String userName = null;
+  String? userName = null;
   CauseUserIdCause();
 
   @override
@@ -34,7 +34,7 @@ class CauseUserIdCause {
   }
 
   static List<CauseUserIdCause> listFromJson(List<dynamic> json) {
-    return json == null ? new List<CauseUserIdCause>() : json.map((value) => new CauseUserIdCause.fromJson(value)).toList();
+    return json == null ? <CauseUserIdCause>[] : json.map((value) => new CauseUserIdCause.fromJson(value)).toList();
   }
 
   static Map<String, CauseUserIdCause> mapFromJson(Map<String, Map<String, dynamic>> json) {

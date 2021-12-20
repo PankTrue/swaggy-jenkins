@@ -2,7 +2,7 @@ part of openapi.api;
 
 class Queue {
   
-  String class_ = null;
+  String? class_ = null;
   
   List<QueueBlockedItem> items = [];
   Queue();
@@ -26,7 +26,7 @@ class Queue {
   }
 
   static List<Queue> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Queue>() : json.map((value) => new Queue.fromJson(value)).toList();
+    return json == null ? <Queue>[] : json.map((value) => new Queue.fromJson(value)).toList();
   }
 
   static Map<String, Queue> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,9 +2,9 @@ part of openapi.api;
 
 class InputStepImpllinks {
   
-  Link self = null;
+  Link? self = null;
   
-  String class_ = null;
+  String? class_ = null;
   InputStepImpllinks();
 
   @override
@@ -26,7 +26,7 @@ class InputStepImpllinks {
   }
 
   static List<InputStepImpllinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<InputStepImpllinks>() : json.map((value) => new InputStepImpllinks.fromJson(value)).toList();
+    return json == null ? <InputStepImpllinks>[] : json.map((value) => new InputStepImpllinks.fromJson(value)).toList();
   }
 
   static Map<String, InputStepImpllinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,23 +2,23 @@ part of openapi.api;
 
 class PipelineStepImpl {
   
-  String class_ = null;
+  String? class_ = null;
   
-  PipelineStepImpllinks links = null;
+  PipelineStepImpllinks? links = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  int durationInMillis = null;
+  int? durationInMillis = null;
   
-  String id = null;
+  String? id = null;
   
-  InputStepImpl input = null;
+  InputStepImpl? input = null;
   
-  String result = null;
+  String? result = null;
   
-  String startTime = null;
+  String? startTime = null;
   
-  String state = null;
+  String? state = null;
   PipelineStepImpl();
 
   @override
@@ -54,7 +54,7 @@ class PipelineStepImpl {
   }
 
   static List<PipelineStepImpl> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineStepImpl>() : json.map((value) => new PipelineStepImpl.fromJson(value)).toList();
+    return json == null ? <PipelineStepImpl>[] : json.map((value) => new PipelineStepImpl.fromJson(value)).toList();
   }
 
   static Map<String, PipelineStepImpl> mapFromJson(Map<String, Map<String, dynamic>> json) {

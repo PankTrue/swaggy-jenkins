@@ -2,23 +2,23 @@ part of openapi.api;
 
 class PipelineImpl {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  int estimatedDurationInMillis = null;
+  int? estimatedDurationInMillis = null;
   
-  String fullName = null;
+  String? fullName = null;
   
-  String latestRun = null;
+  String? latestRun = null;
   
-  String name = null;
+  String? name = null;
   
-  String organization = null;
+  String? organization = null;
   
-  int weatherScore = null;
+  int? weatherScore = null;
   
-  PipelineImpllinks links = null;
+  PipelineImpllinks? links = null;
   PipelineImpl();
 
   @override
@@ -54,7 +54,7 @@ class PipelineImpl {
   }
 
   static List<PipelineImpl> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineImpl>() : json.map((value) => new PipelineImpl.fromJson(value)).toList();
+    return json == null ? <PipelineImpl>[] : json.map((value) => new PipelineImpl.fromJson(value)).toList();
   }
 
   static Map<String, PipelineImpl> mapFromJson(Map<String, Map<String, dynamic>> json) {

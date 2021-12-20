@@ -2,33 +2,33 @@ part of openapi.api;
 
 class Hudson {
   
-  String class_ = null;
+  String? class_ = null;
   
   List<HudsonassignedLabels> assignedLabels = [];
   
-  String mode = null;
+  String? mode = null;
   
-  String nodeDescription = null;
+  String? nodeDescription = null;
   
-  String nodeName = null;
+  String? nodeName = null;
   
-  int numExecutors = null;
+  int? numExecutors = null;
   
-  String description = null;
+  String? description = null;
   
   List<FreeStyleProject> jobs = [];
   
-  AllView primaryView = null;
+  AllView? primaryView = null;
   
-  bool quietingDown = null;
+  bool? quietingDown = null;
   
-  int slaveAgentPort = null;
+  int? slaveAgentPort = null;
   
-  UnlabeledLoadStatistics unlabeledLoad = null;
+  UnlabeledLoadStatistics? unlabeledLoad = null;
   
-  bool useCrumbs = null;
+  bool? useCrumbs = null;
   
-  bool useSecurity = null;
+  bool? useSecurity = null;
   
   List<AllView> views = [];
   Hudson();
@@ -78,7 +78,7 @@ class Hudson {
   }
 
   static List<Hudson> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Hudson>() : json.map((value) => new Hudson.fromJson(value)).toList();
+    return json == null ? <Hudson>[] : json.map((value) => new Hudson.fromJson(value)).toList();
   }
 
   static Map<String, Hudson> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,15 +2,15 @@ part of openapi.api;
 
 class BranchImpllinks {
   
-  Link self = null;
+  Link? self = null;
   
-  Link actions = null;
+  Link? actions = null;
   
-  Link runs = null;
+  Link? runs = null;
   
-  Link queue = null;
+  Link? queue = null;
   
-  String class_ = null;
+  String? class_ = null;
   BranchImpllinks();
 
   @override
@@ -38,7 +38,7 @@ class BranchImpllinks {
   }
 
   static List<BranchImpllinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<BranchImpllinks>() : json.map((value) => new BranchImpllinks.fromJson(value)).toList();
+    return json == null ? <BranchImpllinks>[] : json.map((value) => new BranchImpllinks.fromJson(value)).toList();
   }
 
   static Map<String, BranchImpllinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

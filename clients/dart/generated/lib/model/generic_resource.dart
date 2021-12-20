@@ -2,17 +2,17 @@ part of openapi.api;
 
 class GenericResource {
   
-  String class_ = null;
+  String? class_ = null;
   
-  String displayName = null;
+  String? displayName = null;
   
-  int durationInMillis = null;
+  int? durationInMillis = null;
   
-  String id = null;
+  String? id = null;
   
-  String result = null;
+  String? result = null;
   
-  String startTime = null;
+  String? startTime = null;
   GenericResource();
 
   @override
@@ -42,7 +42,7 @@ class GenericResource {
   }
 
   static List<GenericResource> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GenericResource>() : json.map((value) => new GenericResource.fromJson(value)).toList();
+    return json == null ? <GenericResource>[] : json.map((value) => new GenericResource.fromJson(value)).toList();
   }
 
   static Map<String, GenericResource> mapFromJson(Map<String, Map<String, dynamic>> json) {

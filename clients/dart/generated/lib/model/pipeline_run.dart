@@ -2,35 +2,35 @@ part of openapi.api;
 
 class PipelineRun {
   
-  String class_ = null;
+  String? class_ = null;
   
   List<PipelineRunartifacts> artifacts = [];
   
-  int durationInMillis = null;
+  int? durationInMillis = null;
   
-  int estimatedDurationInMillis = null;
+  int? estimatedDurationInMillis = null;
   
-  String enQueueTime = null;
+  String? enQueueTime = null;
   
-  String endTime = null;
+  String? endTime = null;
   
-  String id = null;
+  String? id = null;
   
-  String organization = null;
+  String? organization = null;
   
-  String pipeline = null;
+  String? pipeline = null;
   
-  String result = null;
+  String? result = null;
   
-  String runSummary = null;
+  String? runSummary = null;
   
-  String startTime = null;
+  String? startTime = null;
   
-  String state = null;
+  String? state = null;
   
-  String type = null;
+  String? type = null;
   
-  String commitId = null;
+  String? commitId = null;
   PipelineRun();
 
   @override
@@ -78,7 +78,7 @@ class PipelineRun {
   }
 
   static List<PipelineRun> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineRun>() : json.map((value) => new PipelineRun.fromJson(value)).toList();
+    return json == null ? <PipelineRun>[] : json.map((value) => new PipelineRun.fromJson(value)).toList();
   }
 
   static Map<String, PipelineRun> mapFromJson(Map<String, Map<String, dynamic>> json) {

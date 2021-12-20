@@ -2,13 +2,13 @@ part of openapi.api;
 
 class PipelineRunartifacts {
   
-  String name = null;
+  String? name = null;
   
-  int size = null;
+  int? size = null;
   
-  String url = null;
+  String? url = null;
   
-  String class_ = null;
+  String? class_ = null;
   PipelineRunartifacts();
 
   @override
@@ -34,7 +34,7 @@ class PipelineRunartifacts {
   }
 
   static List<PipelineRunartifacts> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineRunartifacts>() : json.map((value) => new PipelineRunartifacts.fromJson(value)).toList();
+    return json == null ? <PipelineRunartifacts>[] : json.map((value) => new PipelineRunartifacts.fromJson(value)).toList();
   }
 
   static Map<String, PipelineRunartifacts> mapFromJson(Map<String, Map<String, dynamic>> json) {

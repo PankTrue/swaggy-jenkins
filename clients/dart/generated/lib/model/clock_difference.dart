@@ -2,9 +2,9 @@ part of openapi.api;
 
 class ClockDifference {
   
-  String class_ = null;
+  String? class_ = null;
   
-  int diff = null;
+  int? diff = null;
   ClockDifference();
 
   @override
@@ -26,7 +26,7 @@ class ClockDifference {
   }
 
   static List<ClockDifference> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ClockDifference>() : json.map((value) => new ClockDifference.fromJson(value)).toList();
+    return json == null ? <ClockDifference>[] : json.map((value) => new ClockDifference.fromJson(value)).toList();
   }
 
   static Map<String, ClockDifference> mapFromJson(Map<String, Map<String, dynamic>> json) {

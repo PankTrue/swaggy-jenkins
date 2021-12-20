@@ -4,33 +4,33 @@ class PipelinelatestRun {
   
   List<PipelinelatestRunartifacts> artifacts = [];
   
-  int durationInMillis = null;
+  int? durationInMillis = null;
   
-  int estimatedDurationInMillis = null;
+  int? estimatedDurationInMillis = null;
   
-  String enQueueTime = null;
+  String? enQueueTime = null;
   
-  String endTime = null;
+  String? endTime = null;
   
-  String id = null;
+  String? id = null;
   
-  String organization = null;
+  String? organization = null;
   
-  String pipeline = null;
+  String? pipeline = null;
   
-  String result = null;
+  String? result = null;
   
-  String runSummary = null;
+  String? runSummary = null;
   
-  String startTime = null;
+  String? startTime = null;
   
-  String state = null;
+  String? state = null;
   
-  String type = null;
+  String? type = null;
   
-  String commitId = null;
+  String? commitId = null;
   
-  String class_ = null;
+  String? class_ = null;
   PipelinelatestRun();
 
   @override
@@ -78,7 +78,7 @@ class PipelinelatestRun {
   }
 
   static List<PipelinelatestRun> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelinelatestRun>() : json.map((value) => new PipelinelatestRun.fromJson(value)).toList();
+    return json == null ? <PipelinelatestRun>[] : json.map((value) => new PipelinelatestRun.fromJson(value)).toList();
   }
 
   static Map<String, PipelinelatestRun> mapFromJson(Map<String, Map<String, dynamic>> json) {

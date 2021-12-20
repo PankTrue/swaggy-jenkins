@@ -2,7 +2,7 @@ part of openapi.api;
 
 class HudsonassignedLabels {
   
-  String class_ = null;
+  String? class_ = null;
   HudsonassignedLabels();
 
   @override
@@ -22,7 +22,7 @@ class HudsonassignedLabels {
   }
 
   static List<HudsonassignedLabels> listFromJson(List<dynamic> json) {
-    return json == null ? new List<HudsonassignedLabels>() : json.map((value) => new HudsonassignedLabels.fromJson(value)).toList();
+    return json == null ? <HudsonassignedLabels>[] : json.map((value) => new HudsonassignedLabels.fromJson(value)).toList();
   }
 
   static Map<String, HudsonassignedLabels> mapFromJson(Map<String, Map<String, dynamic>> json) {

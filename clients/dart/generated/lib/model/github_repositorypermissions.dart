@@ -2,14 +2,16 @@ part of openapi.api;
 
 class GithubRepositorypermissions {
   
-  bool admin = null;
+  bool admin = false;
   
-  bool push = null;
+  bool push = false;
   
-  bool pull = null;
+  bool pull = false;
   
-  String class_ = null;
+  String class_ = "";
+
   GithubRepositorypermissions();
+  
 
   @override
   String toString() {
@@ -34,7 +36,7 @@ class GithubRepositorypermissions {
   }
 
   static List<GithubRepositorypermissions> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubRepositorypermissions>() : json.map((value) => new GithubRepositorypermissions.fromJson(value)).toList();
+    return json == null ? <GithubRepositorypermissions>[] : json.map((value) => new GithubRepositorypermissions.fromJson(value)).toList();
   }
 
   static Map<String, GithubRepositorypermissions> mapFromJson(Map<String, Map<String, dynamic>> json) {

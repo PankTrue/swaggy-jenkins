@@ -2,9 +2,9 @@ part of openapi.api;
 
 class GithubScmlinks {
   
-  Link self = null;
+  Link? self = null;
   
-  String class_ = null;
+  String? class_ = null;
   GithubScmlinks();
 
   @override
@@ -26,7 +26,7 @@ class GithubScmlinks {
   }
 
   static List<GithubScmlinks> listFromJson(List<dynamic> json) {
-    return json == null ? new List<GithubScmlinks>() : json.map((value) => new GithubScmlinks.fromJson(value)).toList();
+    return json == null ? <GithubScmlinks>[] : json.map((value) => new GithubScmlinks.fromJson(value)).toList();
   }
 
   static Map<String, GithubScmlinks> mapFromJson(Map<String, Map<String, dynamic>> json) {

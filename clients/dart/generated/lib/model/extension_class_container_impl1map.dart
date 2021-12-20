@@ -2,11 +2,11 @@ part of openapi.api;
 
 class ExtensionClassContainerImpl1map {
   
-  ExtensionClassImpl ioJenkinsBlueoceanServiceEmbeddedRestPipelineImpl = null;
+  ExtensionClassImpl? ioJenkinsBlueoceanServiceEmbeddedRestPipelineImpl = null;
   
-  ExtensionClassImpl ioJenkinsBlueoceanServiceEmbeddedRestMultiBranchPipelineImpl = null;
+  ExtensionClassImpl? ioJenkinsBlueoceanServiceEmbeddedRestMultiBranchPipelineImpl = null;
   
-  String class_ = null;
+  String? class_ = null;
   ExtensionClassContainerImpl1map();
 
   @override
@@ -30,7 +30,7 @@ class ExtensionClassContainerImpl1map {
   }
 
   static List<ExtensionClassContainerImpl1map> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ExtensionClassContainerImpl1map>() : json.map((value) => new ExtensionClassContainerImpl1map.fromJson(value)).toList();
+    return json == null ? <ExtensionClassContainerImpl1map>[] : json.map((value) => new ExtensionClassContainerImpl1map.fromJson(value)).toList();
   }
 
   static Map<String, ExtensionClassContainerImpl1map> mapFromJson(Map<String, Map<String, dynamic>> json) {

@@ -2,11 +2,11 @@ part of openapi.api;
 
 class ExtensionClassContainerImpl1 {
   
-  String class_ = null;
+  String? class_ = null;
   
-  ExtensionClassContainerImpl1links links = null;
+  ExtensionClassContainerImpl1links? links = null;
   
-  ExtensionClassContainerImpl1map map = null;
+  ExtensionClassContainerImpl1map? map = null;
   ExtensionClassContainerImpl1();
 
   @override
@@ -30,7 +30,7 @@ class ExtensionClassContainerImpl1 {
   }
 
   static List<ExtensionClassContainerImpl1> listFromJson(List<dynamic> json) {
-    return json == null ? new List<ExtensionClassContainerImpl1>() : json.map((value) => new ExtensionClassContainerImpl1.fromJson(value)).toList();
+    return json == null ? <ExtensionClassContainerImpl1>[] : json.map((value) => new ExtensionClassContainerImpl1.fromJson(value)).toList();
   }
 
   static Map<String, ExtensionClassContainerImpl1> mapFromJson(Map<String, Map<String, dynamic>> json) {

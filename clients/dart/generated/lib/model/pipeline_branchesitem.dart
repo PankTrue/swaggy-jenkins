@@ -2,23 +2,23 @@ part of openapi.api;
 
 class PipelineBranchesitem {
   
-  String displayName = null;
+  String? displayName = null;
   
-  int estimatedDurationInMillis = null;
+  int? estimatedDurationInMillis = null;
   
-  String name = null;
+  String? name = null;
   
-  int weatherScore = null;
+  int? weatherScore = null;
   
-  PipelineBranchesitemlatestRun latestRun = null;
+  PipelineBranchesitemlatestRun? latestRun = null;
   
-  String organization = null;
+  String? organization = null;
   
-  PipelineBranchesitempullRequest pullRequest = null;
+  PipelineBranchesitempullRequest? pullRequest = null;
   
-  int totalNumberOfPullRequests = null;
+  int? totalNumberOfPullRequests = null;
   
-  String class_ = null;
+  String? class_ = null;
   PipelineBranchesitem();
 
   @override
@@ -54,7 +54,7 @@ class PipelineBranchesitem {
   }
 
   static List<PipelineBranchesitem> listFromJson(List<dynamic> json) {
-    return json == null ? new List<PipelineBranchesitem>() : json.map((value) => new PipelineBranchesitem.fromJson(value)).toList();
+    return json == null ? <PipelineBranchesitem>[] : json.map((value) => new PipelineBranchesitem.fromJson(value)).toList();
   }
 
   static Map<String, PipelineBranchesitem> mapFromJson(Map<String, Map<String, dynamic>> json) {
